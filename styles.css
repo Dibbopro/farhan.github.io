@@ -1,0 +1,166 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  background: #111;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  animation: slideDown 0.7s ease;
+}
+nav h1 {
+  font-size: 1.6rem;
+  color: #00bcd4;
+  margin: 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #00bcd4;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+  text-align: center;
+  padding: 140px 20px 50px;
+  background: linear-gradient(to bottom, #141414, #0e0e0e);
+  animation: fade 1.2s ease;
+}
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  animation: fadeUp 1s ease;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  font-size: 2rem;
+  border-left: 4px solid #00bcd4;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+ul li {
+  margin: 8px 0;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.gallery .card {
+  background: #121212;
+  border-radius: 12px;
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery .card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.gallery .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,188,212,0.5);
+}
+
+.socials a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Skills badges */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+.skills span {
+  background: #222;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  border: 1px solid #00bcd4;
+  transition: background 0.3s;
+}
+.skills span:hover {
+  background: #00bcd4;
+  color: #111;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #00bcd4;
+  color: #000;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s;
+  box-shadow: 0 0 12px rgba(0, 188, 212, 0.5);
+  z-index: 999;
+}
+#backToTop:hover {
+  transform: scale(1.15);
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
